@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs Domain</title>
+</head>
+<body>
+
+<h4>Logs Domain</h4>
+<p th:text=" ${todayDate} "  >  </p>
+
+<p th:text=" ${totalLogs} "  >  </p>
+
+<table>
+    <tr th:each = " log:${logs}">
+        <td th:text="${log.id}"> </td>
+        <td th:text="${log.ip}"> </td>
+        <td th:text="${log.operationMethod}"> </td>
+        <td th:text="${log.user}"> </td>
+        <td th:text="${log.time}"> </td>
+        <td th:text="${log.status}"> </td>
+        <td th:text="${log.endpoint}"> </td>
+        <td th:text="${log.domain}"> </td>
+        <td th:text="${log.version}"> </td>
+        <td th:text="${log.restMethod}"> </td>
+
+    </tr>
+</table>
+
+
+</body>
+</html>
